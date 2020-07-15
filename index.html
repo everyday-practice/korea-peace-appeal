@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./libraries/swiper.css">
+  <title>한반도 종전 평화</title>
+</head>
+<body>
+
+  <!-- Invisible Header (for SEO) -->
+  <h1 class="hidden-header">한반도 종전 평화</h1>
+  
+  <!-- Nav Bar -->
+  <div class="nav">
+    <a class="nav__logo" href="/">
+      <img class="logo-img" src="./images/logo.png" />
+      <img class="logo-img--mobile" src="./images/logo-mobile.png" />
+    </a>
+    <a class="nav__link nav__link--faq" href="/faq.html">FAQ</a>
+    <a class="nav__link nav__link--action" href="/action.html">ACTION</a>
+    <a class="nav__link nav__link--about" href="/about.html">ABOUT</a>
+    <a class="nav__lang">EN</a>
+    <a class="hamburger">
+      <img src="./images/icon-hamburger.png">
+    </a>
+  </div>
+
+  <!-- Mobile Nav Layer -->
+  <div class="mobile-nav">
+    <a class="mobile-nav__link nav__link--faq" href="/faq.html">FAQ</a>
+    <a class="mobile-nav__link nav__link--action" href="/action.html">ACTION</a>
+    <a class="mobile-nav__link nav__link--about" href="/about.html">ABOUT</a>
+    <a class="mobile-nav__lang">EN</a>
+    <a class="mobile-nav-close-button">
+      <img src="./images/icon-close-white-no-circle.png" />
+    </a>
+  </div>
+
+  <!-- Shortcuts -->
+  <div class="shortcuts">
+    <a class="shortcuts__link shortcuts__link--sign" href="#sign">
+      <span class="use-brand-font">KOREA PEACE APPEAL</span>지금 서명하기
+    </a>
+    <a class="shortcuts__link shortcuts__link--subscribe">
+      구독하기
+    </a>
+  </div>
+  <div class="top-clearance"></div>
+
+  <!-- Sign-Form -->
+  <div id="signform-layer" action="/" class="signform-layer">
+    <form class="signform" method="POST">
+      <!-- <div class=""></div> -->
+      <input class="signform-input-text signform__name" type="text" name="name" placeholder="이름" >
+      <div class="signform__gender custom-select">
+        <select class="signform-select" name="gender">
+          <option value="" disabled selected hidden>성별</option>
+          <option value="male">남자</option>
+          <option value="female">여자</option>
+          <!-- <option value="기타">기타</option> -->
+        </select> 
+        <img class="custom-select-arrow" src="./images/icon-arrow.png">
+      </div>
+      <div class="signform__city custom-select">
+        <select class="signform-select" name="city">
+          <option value="" disabled selected hidden>도시</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <!-- ... -->
+        </select>
+        <img class="custom-select-arrow" src="./images/icon-arrow.png">
+      </div>
+      <div class="signform__country custom-select">
+        <select class="signform-select" name="country">
+          <option value="" disabled selected hidden>국가</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <!-- ... -->
+        </select>
+        <img class="custom-select-arrow" src="./images/icon-arrow.png">
+      </div>
+      <input class="signform-input-text signform__email" type="text" id="email" name="email" placeholder="e.mail">
+      <label class="signform__agree" for="agree" >
+        <input type="checkbox" id="agree" name="agree">
+        <div></div>
+        개인정보 수집/이용에 동의
+      </label>
+      <p id="error-message" class="error-message--hidden">모든 필드를 작성해주세요.</p>
+      <input id="signform-submit" class="signform-input-submit" type="submit" value="서명하기">
+      <div class="share-button-box">
+        <a class="share-button"> 
+          <img src="./images/icon-facebook.png" />
+        </a>
+        <a class="share-button"> 
+          <img src="./images/icon-twitter.png" />
+        </a>
+        <a class="share-button">
+          <img src="./images/icon-kakao.png" />
+        </a>
+        <a class="share-button">
+          <img src="./images/icon-instragram.png" />
+        </a>
+      </div>
+    </form>
+    <a class="signform-close-button">
+      <img src="./images/icon-close-black.png" />
+    </a>
+  </div>
+ 
+
+  <!-- 
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Page-Specific Markup: -->
+
+  <!-- 
+    * Instructions on displaying animated graph:
+    * 1. Add ".show-graph" class to #graph-container element.
+    * 2. Insert number in #graph-number element.
+   -->
+
+  <div id="graph-container" class="section"> 
+    <!-- (A) Signers Total Module -->
+    <div id="graph">
+      <div id="graph-bar" class="graph__bar"></div>
+      <p class="graph__text">
+        평화의 연대에 동참한<br/>
+        <span id="graph-number" class="graph__number use-brand-font">
+          <!-- Below is a sample number. Replace it with dynamic data. -->
+          83842391
+        </span>명
+      </p>
+    </div>
+    <!-- (B) Swiper Module -->
+    <div id="swiper" class="swiper-container">
+      <div class="swiper-wrapper">
+        <img class="swiper-slide object-fit-image" src="./images/swiper-sample-1.jpg">
+        <img class="swiper-slide object-fit-image" src="./images/swiper-sample-2.jpg">
+        <img class="swiper-slide object-fit-image" src="./images/swiper-sample-3.jpg">
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Play Button -->
+    <a class="landing__play-button">
+      <img id="show-on-mouseleave" src="./images/icon-play.png">
+      <p id="show-on-mouseenter">영상 보기</p>
+    </a>
+  </div>
+
+  <div class="section section--intro">
+    <img class="intro__cover-graphic" src="./images/cover-graphic.png"/>
+    <p class="intro__statement">
+      “한반도 종전 평화 캠페인은 한국전쟁을 끝내고<br/>
+      휴전에서 평화로 나아가자!는 목소리를 한반도를 넘어<br/>
+      전 세계적으로 모아가는 국제 캠페인입니다.<br/>
+      한반도 평화선언 Korea Peace Appeal 서명에<br/>
+      함께 해주세요!”
+    </p>
+    <div class="intro__title-box">
+      <img class="phrase" src="./images/phrase.png">
+      <h2 class="use-brand-font">KOREA PEACE APPEAL</h2>
+    </div>
+    <div class="intro__subtitle-box">
+      <h3>
+        한국전쟁 70년, 휴전에서 평화로!<br/>
+        이제 우리가 전쟁을 끝내자!<br/>
+        70 years is enough, End the Korean War<br/>
+      </h3>
+    </div>
+    <div class="intro__text-box">
+      <p>
+        한국 전쟁이 일어난 지 70년이 되었지만 아직 끝나지 않았습니다. 이 전쟁에는 남북한뿐만 아니라, 중국과 미국을 포함한 수많은 나라들이 참전했습니다. 한반도의 주민들은 오랜 시간 휴전 상태가 끝나고 온전한 평화가 오기를 기다려왔습니다. 2018년 남북 정상이 함께 군사분계선을 넘나들고, 북미 정상이 처음으로 악수를 나눴던 순간들을 기억합니다. 하지만 평화의 설레임도 잠시, 어렵게 이뤄낸 합의들이 이행되지 않으면서 한반도 평화를 위한 걸음은 앞으로 나아가지 못하고 있습니다.
+        <br/><br/>
+        지난 70년간 지속된 불안정한 휴전 상태는 분단 한반도의 주민들에게 큰 고통을 안겼을 뿐만 아니라 동북아시아와 세계의 평화마저 위협해왔습니다. 한국전쟁으로 수백만 명의 사상자와 수많은 이산가족이 생겨났습니다. 그 후로도 불안과 증오가 한반도 주민의 삶을 지배해왔습니다. 분단과 대결 상태의 한반도는 냉전 시대에 이어 지금까지 세계 핵 군비경쟁과 확산을 촉발해왔습니다.  
+        <br/><br/>
+        지난 역사는 상대를 불신하고 굴복시키려는 적대 정책이 한반도의 갈등을 해결하지 못했고 도리어 악화시켜 왔음을 증명하고 있습니다. 이제 우리는 가장 분명하고 확실한 해법을 관련국 정부가 진지하고 책임있게 채택할 것을 촉구합니다. 지금 당장 한국전쟁을 끝내는 것이 그것입니다.
+        <br/><br/>
+        오랜 적대와 불안은 평화로운 해결책에 대한 우리의 상상력을 가로막아왔습니다. 서로에게 겨누었던 총을 내리고 헤어진 가족들이 하루빨리 만날 수 있기를 기대합니다. 남한과 북한, 북한과 미국, 그리고 세계의 시민과 정부들이 협력하면서 평화롭게 공존하는 미래를 그려봅니다. 우리의 세금과 자원을 전쟁을 준비하는 대신, 시민의 안전과 행복, 지속 가능한 환경을 위해 사용하기를 희망합니다. 한반도의 평화는 평화롭고 핵무기 없는 동아시아, 나아가 세계 평화를 위한 디딤돌이 될 수 있을 것이라고 믿습니다. 
+        <br/><br/>
+        이제 누구에게도 도움이 되지 않는 이 전쟁을 끝내고 평화로 나아갈 시간입니다. 우리는 다음과 같이 제안합니다.
+        <br/><br/>
+        하나, 한국 전쟁을 끝내고 평화협정을 체결해야 합니다
+        <br/>
+        둘, 핵무기도 핵위협도 없는 한반도와 세계를 만들어야 합니다
+        <br/>
+        셋, 제재와 압박이 아닌 대화와 협력으로 갈등을 해결해야 합니다
+        <br/>
+        넷, 군비 경쟁의 악순환에서 벗어나 시민의 안전과 환경에 투자해야 합니다
+        <br/><br/>
+        + 이 서명은 남,북,미,중을 포함한 한국전쟁 관련국 정부와 유엔에 전달될 예정입니다.
+      </p>
+    </div>
+    <div class="intro__signers">
+      <h3>서명에 함께 한 사람들</h3>
+      <div class="profile-list">
+        <!-- 
+          * * * * * * * * * * * * * * * * * * *
+          * Replace with a loop from here, -->
+        <div class="profile">
+          <div class="profile__img-mask">
+            <img class="profile__img object-fit-image" src="./images/profile-sample.jpg">
+          </div>
+          <h4 class="profile__name">
+            문정인
+          </h4>
+          <h4 class="profile__title">
+            연세대학교 명예특임교수
+          </h4>
+        </div>
+        <div class="profile">
+          <div class="profile__img-mask">
+            <img class="profile__img object-fit-image" src="./images/profile-sample.jpg">
+          </div>
+          <h4 class="profile__name">
+            김희중 대주교
+          </h4>
+          <h4 class="profile__title">
+            한국 천주교 주교회의
+          </h4>
+        </div>
+        <div class="profile">
+          <div class="profile__img-mask">
+            <img class="profile__img object-fit-image" src="./images/profile-sample.jpg">
+          </div>
+          <h4 class="profile__name">
+            임동원
+          </h4>
+          <h4 class="profile__title">
+            전 통일부 장관
+          </h4>
+        </div>
+        <div class="profile">
+          <div class="profile__img-mask">
+            <img class="profile__img object-fit-image" src="./images/profile-sample.jpg">
+          </div>
+          <h4 class="profile__name">
+            지은희
+          </h4>
+          <h4 class="profile__title">
+            전 여성부 장관
+          </h4>
+        </div>
+        <!-- to hear.   *
+          * * * * * * * *
+        -->
+      </div>
+    </div>
+  </div>
+
+  <div class="section section--news">
+    <h2 class="news__title">활동 소식</h2>
+    <div class="news__news-card-list">
+      <!-- 
+        * * * * * * * * * * * * * * * * * * *
+        * Replace with a loop from here, -->
+      <a class="news-card" href="/action.html#sample-slug-1">
+        <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+        <h3 class="news-card__title">
+          네트워크 단체의 캠페인 활동 기록
+        </h3>
+      </a>
+      <a class="news-card" href="/action.html#sample-slug-2">
+        <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+        <h3 class="news-card__title">
+          네트워크 단체의 캠페인 활동 기록
+        </h3>
+      </a>
+      <a class="news-card" href="/action.html#sample-slug-3">
+        <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+        <h3 class="news-card__title">
+          네트워크 단체의 캠페인 활동 기록
+        </h3>
+      </a>
+      <a class="news-card" href="/action.html#sample-slug-4">
+        <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+        <h3 class="news-card__title">
+          네트워크 단체의 캠페인 활동 기록
+        </h3>
+      <a class="news-card" href="/action.html#sample-slug-5">
+        <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+        <h3 class="news-card__title">
+          네트워크 단체의 캠페인 활동 기록
+        </h3>
+      </a>
+      <a class="news-card" href="/action.html#sample-slug-6">
+        <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+        <h3 class="news-card__title">
+          네트워크 단체의 캠페인 활동 기록
+        </h3>
+      </a>
+      <!-- to hear.   *
+        * * * * * * * *
+      -->
+    </div>
+  </div>
+  <!--                                                                  *
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  -->
+  
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer__left-box">
+      <p>
+        한반도 종전 평화 캠페인<br/>
+        Campaign to End the Korean War
+      </p>
+    </div>
+    <div class="footer__middle-box">
+      <form>
+        <label class="form__label" for="email">캠페인 뉴스레터를 받아보세요!</label><br/>
+        <div class="form__input-group">
+          <input class="form__input--email" type="email" id="email" name="email" placeholder="e.mail">
+          <input class="form__input--submit" type="submit" value="구독">
+          <a class="share-button"> 
+            <img src="./images/icon-facebook.png" />
+          </a>
+          <a class="share-button"> 
+            <img src="./images/icon-twitter.png" />
+          </a>
+          <a class="share-button">
+            <img src="./images/icon-kakao.png" />
+          </a>
+          <a class="share-button">
+            <img src="./images/icon-instragram.png" />
+          </a>
+        </div>
+      </form>
+    </div>
+    <div class="footer__right-box">
+      <p>
+        문의<br/>
+        endthekoreanwarnow@gmail.com
+      </p>
+    </div>
+  </div>
+
+  <div class="bottom-clearance"></div>
+
+
+  <!--
+    * * * * * * * * * * * * * * * * * * * * * * *
+    * Page-Related Scripts -->
+  <script src="./libraries/css-vars-ponyfill.min.js"></script>
+  <script src="./libraries/swiper.min.js"></script>
+  <script src="./libraries/ofi.min.js"></script>
+  <script src="./common.js"></script>
+  <script src="./index.js"></script>
+  <!--                                          *
+    * * * * * * * * * * * * * * * * * * * * * * *
+  -->
+
+
+</body>
+</html>

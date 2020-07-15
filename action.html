@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>한반도 종전 평화</title>
+</head>
+<body id="action-page-body">
+
+  <!-- Invisible Header (for SEO) -->
+  <h1 class="hidden-header">한반도 종전 평화</h1>
+  
+  <!-- Nav Bar -->
+  <div class="nav">
+    <a class="nav__logo" href="/">
+      <img class="logo-img" src="./images/logo.png" />
+      <img class="logo-img--mobile" src="./images/logo-mobile.png" />
+    </a>
+    <a class="nav__link nav__link--faq" href="/faq.html">FAQ</a>
+    <a class="nav__link nav__link--action nav__link--active" href="/action.html">ACTION</a>
+    <a class="nav__link nav__link--about" href="/about.html">ABOUT</a>
+    <a class="nav__lang">EN</a>
+    <a class="hamburger">
+      <img src="./images/icon-hamburger.png">
+    </a>
+  </div>
+
+  <!-- Mobile Nav Layer -->
+  <div class="mobile-nav">
+    <a class="mobile-nav__link nav__link--faq" href="/faq.html">FAQ</a>
+    <a class="mobile-nav__link nav__link--action" href="/action.html">ACTION</a>
+    <a class="mobile-nav__link nav__link--about" href="/about.html">ABOUT</a>
+    <a class="mobile-nav__lang">EN</a>
+    <a class="mobile-nav-close-button">
+      <img src="./images/icon-close-white-no-circle.png" />
+    </a>
+  </div>
+
+  <!-- Shortcuts -->
+  <div class="shortcuts">
+    <a class="shortcuts__link shortcuts__link--sign" href="#sign">
+      <span class="use-brand-font">KOREA PEACE APPEAL</span>지금 서명하기
+    </a>
+    <a class="shortcuts__link shortcuts__link--subscribe">
+      구독하기
+    </a>
+  </div>
+  <div class="top-clearance"></div>
+ 
+  <!-- Sign-Form -->
+  <div id="signform-layer" action="/" class="signform-layer">
+    <form class="signform" method="POST">
+      <!-- <div class=""></div> -->
+      <input class="signform-input-text signform__name" type="text" name="name" placeholder="이름" >
+      <div class="signform__gender custom-select">
+        <select class="signform-select" name="gender">
+          <option value="" disabled selected hidden>성별</option>
+          <option value="male">남자</option>
+          <option value="female">여자</option>
+          <!-- <option value="기타">기타</option> -->
+        </select> 
+        <img class="custom-select-arrow" src="./images/icon-arrow.png">
+      </div>
+      <div class="signform__city custom-select">
+        <select class="signform-select" name="city">
+          <option value="" disabled selected hidden>도시</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <option value="seoul">서울</option>
+          <!-- ... -->
+        </select>
+        <img class="custom-select-arrow" src="./images/icon-arrow.png">
+      </div>
+      <div class="signform__country custom-select">
+        <select class="signform-select" name="country">
+          <option value="" disabled selected hidden>국가</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <option value="republic-of-korea">Republic of Korea</option>
+          <!-- ... -->
+        </select>
+        <img class="custom-select-arrow" src="./images/icon-arrow.png">
+      </div>
+      <input class="signform-input-text signform__email" type="text" id="email" name="email" placeholder="e.mail">
+      <label class="signform__agree" for="agree" >
+        <input type="checkbox" id="agree" name="agree">
+        <div></div>
+        개인정보 수집/이용에 동의
+      </label>
+      <p id="error-message" class="error-message--hidden">모든 필드를 작성해주세요.</p>
+      <input id="signform-submit" class="signform-input-submit" type="submit" value="서명하기">
+    </form>
+    <a class="signform-close-button">
+      <img src="./images/icon-close-black.png" />
+    </a>
+  </div>
+
+  <!-- 
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Page-Specific Markup: -->
+
+  <!-- Thumbnails -->
+  <div class="news-card-list">
+    <!-- 
+      * * * * * * * * * * * * * * * * * * *
+      * Replace with a loop from here, -->
+    <a class="news-card" href="#sample-slug-1">
+      <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+      <h3 class="news-card__title">
+        네트워크 단체의 캠페인 활동 기록
+      </h3>
+    </a>
+    <a class="news-card" href="#sample-slug-2">
+      <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+      <h3 class="news-card__title">
+        네트워크 단체의 캠페인 활동 기록
+      </h3>
+    </a>
+    <a class="news-card" href="#sample-slug-3">
+      <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+      <h3 class="news-card__title">
+        네트워크 단체의 캠페인 활동 기록
+      </h3>
+    </a>
+    <a class="news-card" href="#sample-slug-4">
+      <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+      <h3 class="news-card__title">
+        네트워크 단체의 캠페인 활동 기록
+      </h3>
+    </a>
+    <a class="news-card" href="#sample-slug-5">
+      <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+      <h3 class="news-card__title">
+        네트워크 단체의 캠페인 활동 기록
+      </h3>
+    </a>
+    <a class="news-card" href="#sample-slug-6">
+      <img class="news-card__img object-fit-image" src="images/news-sample.jpg">
+      <h3 class="news-card__title">
+        네트워크 단체의 캠페인 활동 기록
+      </h3>
+    </a>
+    <!-- to hear.   *
+      * * * * * * * *
+    -->
+  </div>
+
+  <!-- Popup -->
+  <div id="sample-slug-1" class="news-popup-layer">
+    <!-- 
+      * * * * * * * * * * * * * * * * * * *
+      * Replace with a loop from here, -->
+    <div class="news-popup">
+      <p class="news-popup__text">
+        1
+        한국전쟁은 1950년 6월 25일 분단된 한반도에서 일어난 전쟁이다. 원래 하나의 나라였던 한반도(Korea)는 일제의 패망과 함께 독립했으나 소련의 영향력이 확대되는 것을 경계한 미국의 요청으로 남과 북으로 분단되어, 38도선 이남은 미국, 이북은 소련의 지배를 받았다. 미군정은 해방 직후 한반도 주민들에 수립된 인민공화국 정부를 인정하지 않았고, 해외에서 활동해오던 대한민국 임시정부도 인정하지 않았다. 소련은 인민공화국과 해외 무장독립운동을 했던 사회주의 세력을 지지했다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+      </p>
+      <a class="popup-close-button">
+        <img src="./images/icon-close-white.png" />
+      </a>
+    </div>
+  </div>
+  <div id="sample-slug-2" class="news-popup-layer">
+    <div class="news-popup">
+      <p class="news-popup__text">
+        2
+        한국전쟁은 1950년 6월 25일 분단된 한반도에서 일어난 전쟁이다. 원래 하나의 나라였던 한반도(Korea)는 일제의 패망과 함께 독립했으나 소련의 영향력이 확대되는 것을 경계한 미국의 요청으로 남과 북으로 분단되어, 38도선 이남은 미국, 이북은 소련의 지배를 받았다. 미군정은 해방 직후 한반도 주민들에 수립된 인민공화국 정부를 인정하지 않았고, 해외에서 활동해오던 대한민국 임시정부도 인정하지 않았다. 소련은 인민공화국과 해외 무장독립운동을 했던 사회주의 세력을 지지했다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+      </p>
+      <a class="popup-close-button">
+        <img src="./images/icon-close-white.png" />
+      </a>
+    </div>
+  </div>
+  <div id="sample-slug-3" class="news-popup-layer">
+    <div class="news-popup">
+      <p class="news-popup__text">
+        3
+        한국전쟁은 1950년 6월 25일 분단된 한반도에서 일어난 전쟁이다. 원래 하나의 나라였던 한반도(Korea)는 일제의 패망과 함께 독립했으나 소련의 영향력이 확대되는 것을 경계한 미국의 요청으로 남과 북으로 분단되어, 38도선 이남은 미국, 이북은 소련의 지배를 받았다. 미군정은 해방 직후 한반도 주민들에 수립된 인민공화국 정부를 인정하지 않았고, 해외에서 활동해오던 대한민국 임시정부도 인정하지 않았다. 소련은 인민공화국과 해외 무장독립운동을 했던 사회주의 세력을 지지했다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+      </p>
+      <a class="popup-close-button">
+        <img src="./images/icon-close-white.png" />
+      </a>
+    </div>
+  </div>
+  <div id="sample-slug-4" class="news-popup-layer">
+    <div class="news-popup">
+      <p class="news-popup__text">
+        한국전쟁은 1950년 6월 25일 분단된 한반도에서 일어난 전쟁이다. 원래 하나의 나라였던 한반도(Korea)는 일제의 패망과 함께 독립했으나 소련의 영향력이 확대되는 것을 경계한 미국의 요청으로 남과 북으로 분단되어, 38도선 이남은 미국, 이북은 소련의 지배를 받았다. 미군정은 해방 직후 한반도 주민들에 수립된 인민공화국 정부를 인정하지 않았고, 해외에서 활동해오던 대한민국 임시정부도 인정하지 않았다. 소련은 인민공화국과 해외 무장독립운동을 했던 사회주의 세력을 지지했다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+      </p>
+      <a class="popup-close-button">
+        <img src="./images/icon-close-white.png" />
+      </a>
+    </div>
+  </div>
+  <div id="sample-slug-5" class="news-popup-layer">
+    <div class="news-popup">
+      <p class="news-popup__text">
+        한국전쟁은 1950년 6월 25일 분단된 한반도에서 일어난 전쟁이다. 원래 하나의 나라였던 한반도(Korea)는 일제의 패망과 함께 독립했으나 소련의 영향력이 확대되는 것을 경계한 미국의 요청으로 남과 북으로 분단되어, 38도선 이남은 미국, 이북은 소련의 지배를 받았다. 미군정은 해방 직후 한반도 주민들에 수립된 인민공화국 정부를 인정하지 않았고, 해외에서 활동해오던 대한민국 임시정부도 인정하지 않았다. 소련은 인민공화국과 해외 무장독립운동을 했던 사회주의 세력을 지지했다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+      </p>
+      <a class="popup-close-button">
+        <img src="./images/icon-close-white.png" />
+      </a>
+    </div>
+  </div>
+  <div id="sample-slug-6" class="news-popup-layer">
+    <div class="news-popup">
+      <p class="news-popup__text">
+        한국전쟁은 1950년 6월 25일 분단된 한반도에서 일어난 전쟁이다. 원래 하나의 나라였던 한반도(Korea)는 일제의 패망과 함께 독립했으나 소련의 영향력이 확대되는 것을 경계한 미국의 요청으로 남과 북으로 분단되어, 38도선 이남은 미국, 이북은 소련의 지배를 받았다. 미군정은 해방 직후 한반도 주민들에 수립된 인민공화국 정부를 인정하지 않았고, 해외에서 활동해오던 대한민국 임시정부도 인정하지 않았다. 소련은 인민공화국과 해외 무장독립운동을 했던 사회주의 세력을 지지했다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+        <br/><br/>
+        전쟁을 끝내는 것은 한반도를 둘러싼 군사적 대결 상태, 적대 상태를 끝내는 것입니다. 한국전쟁은 1953년 휴전에 합의한 후 현재까지 공식적으로 끝나지 않았습니다. 1991년 남북은 화해 및 불가침, 교류협력 등에 관한 남북기본합의서를 채택하였는데, 그 후에도 남과 북의 군인들이 군사적 대결 상태를 끝내지 못하고 비무장지대(DMZ)와 서해에서의 군사적 충돌로 사상자가 발생하기도 하였습니다. 남한에는 북한을 억제한다는 이유로 미군 병력이 주둔하고 있으며, 유사시 상당한 규모의 해외 미군 병력과 전략자산이 한반도에 전개할 수 있습니다. 해마다 실시되는 한미 연합군사훈련에는 북한 지역을 점령하는 계획을 연습하는 내용도 포함한다고 알려져 있습니다. 북한은 한미 연합훈련이 실시될 때마다 강하게 항의하며, 전시대비태세 훈련과 무기 시험을 해오고 있습니다. 미국의 한반도 핵우산 정책, 북한의 핵무기 개발, 그에 대응하는 한국과 일본의 무기 개발과 구축, 주한미군 및 주일 미군 기지내 새로운 무기 배치 등 한반도를 둘러싼 군사적 대결로 인해 한반도와 주변 지역의 무기 개발과 군비 증강이 확산되어 왔습니다. 휴전 상태가 지속동안, 적대관계에 있는 상대를 무력으로 제거하거나 굴복시켜야 한다는 인식이 사회를 지배하게 됩니다.
+      </p>
+      <a class="popup-close-button">
+        <img src="./images/icon-close-white.png" />
+      </a>
+    </div>
+  </div>
+  <!-- to hear.   *
+    * * * * * * * *
+  -->
+
+  <!--                                                                  *
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  -->
+  
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer__left-box">
+      <p>
+        한반도 종전 평화 캠페인<br/>
+        Campaign to End the Korean War
+      </p>
+    </div>
+    <div class="footer__middle-box">
+      <form>
+        <label class="form__label" for="email">캠페인 뉴스레터를 받아보세요!</label><br/>
+        <div class="form__input-group">
+          <input class="form__input--email" type="email" id="email" name="email" placeholder="e.mail">
+          <input class="form__input--submit" type="submit" value="구독">
+          <a class="share-button"> 
+            <img src="./images/icon-facebook.png" />
+          </a>
+          <a class="share-button"> 
+            <img src="./images/icon-twitter.png" />
+          </a>
+          <a class="share-button">
+            <img src="./images/icon-kakao.png" />
+          </a>
+          <a class="share-button">
+            <img src="./images/icon-instragram.png" />
+          </a>
+        </div>
+      </form>
+    </div>
+    <div class="footer__right-box">
+      <p>
+        문의<br/>
+        endthekoreanwarnow@gmail.com
+      </p>
+    </div>
+  </div>
+
+  <div class="bottom-clearance"></div>
+
+
+  <!--
+    * * * * * * * * * * * * * * * * * * * * * * *
+    * Page-Related Scripts -->
+  <script src="./libraries/css-vars-ponyfill.min.js"></script>
+  <script src="./libraries/ofi.min.js"></script>
+  <script src="./common.js"></script>
+  <script src="./action.js"></script>
+  <!--                                          *
+    * * * * * * * * * * * * * * * * * * * * * * *
+  -->
+
+
+</body>
+</html>
