@@ -53,7 +53,7 @@
 - 서명하기, faq, action에서 History API를 사용한 client-side routing이 구현돼있습니다. (hash에 반영)
 - 서명하기, action 팝업에서 닫기 버튼을 누르면 hash가 없어진 route로 programmatically navigate 되는데 관련 코드는 각 페이지 js 파일에 있습니다. 각 페이지 path를 바꾸시게 된다면 `history.pushState()` function의 3번째 파라미터를 수정하셔야 합니다.
 
-## 수정이하실 Link 요소
+## 수정하실 Link 요소
 
 - 각종 stylesheet와 font, image 등의 asset 링크는 relative path로 설정해두었어요! 찾아서 재설정 부탁드립니다. ("`./`" global search 하시면 한번에 나올 거에요.)
 
