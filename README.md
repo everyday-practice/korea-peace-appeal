@@ -30,10 +30,10 @@
   - IE11 compatibility를 위해서 v4를 사용합니다. (최신버전은 IE 서포트 안함)
   - swiper.css 파일도 같이 load해야 합니다.
   - https://github.com/nolimits4web/swiper/tree/Swiper4
-- choices
-  - Sign-form에서 사용되는 select 라이브러리입니다.
-  - choices.css 파일도 같이 load해야 합니다.
-  - https://github.com/jshjohnson/Choices
+- ~~choices~~
+  - ~~Sign-form에서 사용되는 select 라이브러리입니다.~~
+  - ~~choices.css 파일도 같이 load해야 합니다.~~
+  - ~~https://github.com/jshjohnson/Choices~~
 - ofi
   - IE에서 object-fit CSS property를 사용하기 위한 polyfill입니다.
   - https://github.com/fregante/object-fit-images
